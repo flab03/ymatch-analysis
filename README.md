@@ -12,7 +12,7 @@ Given a Yelp user X, this program
 
 ## Usage
 
-`./find-common-reviewers <user_id> <action>`
+`./ymatch <user_id> <action>`
 
 where `<action>` is `suggest_friends` or `suggest_businesses`.
 
@@ -20,9 +20,9 @@ where `<action>` is `suggest_friends` or `suggest_businesses`.
 ## Example use
 
 ```
-./find-common-reviewers gNCf30Aow5gAW7iSBcV7GA suggest_friends > out
+./ymatch gNCf30Aow5gAW7iSBcV7GA suggest_friends > out
 (head -n 1 out ; tail -n +2 out | sort -n -k 3 -t ,) > steph-friends.csv
 
-./find-common-reviewers gNCf30Aow5gAW7iSBcV7GA suggest_businesses > out
+./ymatch gNCf30Aow5gAW7iSBcV7GA suggest_businesses > out
 (head -n 1 out ; tail -n +2 out | sort -n -k 3 -t ,) > steph-businesses.csv
 ```
